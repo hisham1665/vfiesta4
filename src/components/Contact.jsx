@@ -48,6 +48,19 @@ export default function Contact() {
             <div className="mt-2 font-bold">Event Lead</div>
             <div className="text-sm">+91 9292929292</div>
           </div>
+
+          <div className="flex flex-col items-center">
+            <ImageWithFallback
+              src="/assets/contact3.jpg"
+              alt="event lead"
+              className="w-28 h-28 rounded-full object-cover"
+              width={150}
+              height={150}
+              text="Missing /assets/contact3.jpg"
+            />
+            <div className="mt-2 font-bold">Event Lead</div>
+            <div className="text-sm">+91 9292929292</div>
+          </div>
           </div>
 
           <a href="mailto:ieeeeepie@gmail.com" className="inline-flex items-center gap-2 mt-8 font-bold">

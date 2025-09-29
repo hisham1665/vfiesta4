@@ -3,7 +3,7 @@ import React from 'react'
 export default function EventsGrid({ events }) {
   return (
     <section id="events" className="py-12">
-      <h3 className="text-3xl text-center font-bold">EVENTS</h3>
+      <h3 className="text-3xl text-center font-bold">PRE-EVENTS</h3>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
         {events.map((e) => (
           <article key={e.id} className="border rounded overflow-hidden bg-white shadow-sm">

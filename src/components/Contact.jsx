@@ -32,8 +32,8 @@ export default function Contact() {
               height={150}
               text="Missing /assets/contact1.jpg"
             />
-            <div className="mt-2 font-bold">Event Lead</div>
-            <div className="text-sm">+91 9292929292</div>
+            <div className="mt-2 font-bold">Sandra Sara Soloman</div>
+            <div className="text-sm">+91 9074602051</div>
           </div>
 
           <div className="flex flex-col items-center">
@@ -45,8 +45,8 @@ export default function Contact() {
               height={150}
               text="Missing /assets/contact2.jpg"
             />
-            <div className="mt-2 font-bold">Event Lead</div>
-            <div className="text-sm">+91 9292929292</div>
+            <div className="mt-2 font-bold">Shreyas Abraham</div>
+            <div className="text-sm">+91 8078262041</div>
           </div>
 
           <div className="flex flex-col items-center">
@@ -58,8 +58,8 @@ export default function Contact() {
               height={150}
               text="Missing /assets/contact3.jpg"
             />
-            <div className="mt-2 font-bold">Event Lead</div>
-            <div className="text-sm">+91 9292929292</div>
+            <div className="mt-2 font-bold">Alwin jose</div>
+            <div className="text-sm">+91 9846797378</div>
           </div>
           </div>
 

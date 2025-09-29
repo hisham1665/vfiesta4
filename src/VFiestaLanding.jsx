@@ -37,8 +37,8 @@ export default function VFiestaLanding() {
       <Header />
 
       <section id="home" className="max-w-4xl mx-auto text-center py-16 px-6 lg:py-28" aria-labelledby="hero-heading">
-        <h1 id="hero-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight">
-          V-Fiesta <span className="text-red-700 font-sans">4.0</span>
+        <h1 id="hero-heading" className="text-4xl md:text-6xl font-extrabold tracking-tight">
+          VFIESTA&nbsp;<span className="text-red-700 font-sans">4.0</span>
         </h1>
         {/* <div className="flex justify-center items-center mt-6">
           <img src="/assets/highqltyvlogo.png" alt="" className="w-64 h-auto" />
@@ -56,9 +56,9 @@ export default function VFiestaLanding() {
         <About />
         <Gallery />
         <Tickets />
-        <EventsGrid events={events} />
+        {/* <EventsGrid events={events} />
         <SpeakersList speakers={speakers} />
-        <Schedule />
+        <Schedule /> */}
         <Contact />
       </section>
 

@@ -3,11 +3,11 @@ import ImageWithFallback from './ImageWithFallback'
 
 export default function Gallery() {
   const images = [
-    '/assets/img/event1.jpeg',
-    '/assets/img/event2.jpeg',
-    '/assets/img/event3.jpeg',
-    '/assets/img/event4.jpeg',
-    '/assets/img/event5.jpeg',
+    '/assets/img/gallery1.jpeg',
+    '/assets/img/gallery2.jpeg',
+    '/assets/img/gallery3.jpeg',
+    '/assets/img/gallery4.jpeg',
+    '/assets/img/gallery5.jpeg',
   ];
   return (
     <div id="gallery" className="py-6">

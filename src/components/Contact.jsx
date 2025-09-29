@@ -25,7 +25,7 @@ export default function Contact() {
           <div className="flex flex-row flex-wrap gap-8 md:gap-12 justify-center items-center">
           <div className="flex flex-col items-center">
             <ImageWithFallback
-              src="/assets/contact1.jpg"
+              src="/assets/img/contact1.jpg"
               alt="event lead"
               className="w-28 h-28 rounded-full object-cover"
               width={150}
@@ -38,28 +38,28 @@ export default function Contact() {
 
           <div className="flex flex-col items-center">
             <ImageWithFallback
-              src="/assets/contact2.jpg"
+              src="/assets/img/contact2.jpg"
               alt="event lead 2"
               className="w-28 h-28 rounded-full object-cover"
               width={150}
               height={150}
               text="Missing /assets/contact2.jpg"
             />
-            <div className="mt-2 font-bold">Shreyas Abraham</div>
-            <div className="text-sm">+91 8078262041</div>
+            <div className="mt-2 font-bold">Alwin Jose</div>
+            <div className="text-sm">+91 9846797378 </div>
           </div>
 
           <div className="flex flex-col items-center">
             <ImageWithFallback
-              src="/assets/contact3.jpg"
+              src="/assets/img/contact3.jpg"
               alt="event lead"
               className="w-28 h-28 rounded-full object-cover"
               width={150}
               height={150}
               text="Missing /assets/contact3.jpg"
             />
-            <div className="mt-2 font-bold">Alwin jose</div>
-            <div className="text-sm">+91 9846797378</div>
+            <div className="mt-2 font-bold">Shreyas Abraham</div>
+            <div className="text-sm">+91 8078262041</div>
           </div>
           </div>
 

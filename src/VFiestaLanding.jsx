@@ -37,10 +37,13 @@ export default function VFiestaLanding() {
       <Header />
 
       <section id="home" className="max-w-4xl mx-auto text-center py-16 px-6 lg:py-28" aria-labelledby="hero-heading">
-        <h1 id="hero-heading" className="text-3xl md:text-5xl font-extrabold tracking-tight">
-          Medium length hero headline goes here
+        <h1 id="hero-heading" className="text-4xl md:text-6xl font-extrabold tracking-tight">
+          VFIESTA&nbsp;<span className="text-red-700 font-sans">4.0</span>
         </h1>
-        <p className="mt-4 text-sm md:text-base text-gray-600">
+        {/* <div className="flex justify-center items-center mt-6">
+          <img src="/assets/highqltyvlogo.png" alt="" className="w-64 h-auto" />
+        </div> */}
+        <p className="mt-4 text-sm md:text-base text-gray-600" >
           Get ready to dive into a world of innovation, creativity, and discovery brought to you by IEEE PIE Kerala Section
         </p>
         <a href="#tickets" className="inline-block mt-6 bg-red-700 text-white px-6 py-3 rounded shadow hover:opacity-95 font-aderos">REGISTER NOW</a>
@@ -53,9 +56,9 @@ export default function VFiestaLanding() {
         <About />
         <Gallery />
         <Tickets />
-        <EventsGrid events={events} />
+        {/* <EventsGrid events={events} />
         <SpeakersList speakers={speakers} />
-        <Schedule />
+        <Schedule /> */}
         <Contact />
       </section>
 

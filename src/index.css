@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Any global styles if needed */
+
+/* Smooth scrolling for in-page anchor links */
+html {
+	scroll-behavior: smooth;
+}
+
+@font-face {
+	font-family: 'Aderos Trial';
+	src: url('/assets/ADEROS_TRIAL-Black.otf') format('opentype');
+	font-weight: 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* Apply Aderos to all headings */
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Aderos Trial', 'Montserrat', ui-sans-serif, system-ui, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}

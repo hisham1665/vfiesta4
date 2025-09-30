@@ -95,7 +95,7 @@ export default function Contact() {
           {/* Map Section */}
           <motion.div variants={itemVariants} className="relative">
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10 pointer-events-none" />
               <iframe
                 title="Providence College of Engineering & School of Business, Chengannur"
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3270.898498176114!2d76.61287717408243!3d9.299333390773205!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0622984cfaf3af%3A0xd0320f890b6fca5!2sProvidence%20College%20of%20Engineering%20%26%20School%20of%20Business%2C%20Chengannur!5e1!3m2!1sen!2sin!4v1759124074667!5m2!1sen!2sin"
@@ -172,7 +172,7 @@ export default function Contact() {
             >
               <h4 className="font-bold mb-3">Official Communication</h4>
               <a 
-                href="mailto:ieeeeepie@gmail.com" 
+                href="mailto:ieeepie.kerala@gmail.com" 
                 className="inline-flex items-center text-white hover:text-white/90 transition-colors duration-200 group"
               >
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -215,7 +215,7 @@ export default function Contact() {
               </motion.a>
               
               <a
-                href="mailto:ieeeeepie@gmail.com"
+                href="mailto:ieeepie.kerala@gmail.com"
                 className="inline-flex items-center justify-center px-8 py-4 border-2 border-white/30 text-white text-lg font-semibold rounded-2xl hover:bg-white/10 transition-all duration-300 font-aderos tracking-wide"
               >
                 ASK QUESTIONS

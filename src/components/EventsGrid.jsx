@@ -4,7 +4,7 @@ import { CalendarDaysIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
 const EventsGrid = ({ events }) => {
   return (
-    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+    <section className="py-20 px-4">
       <div className="max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -13,11 +13,11 @@ const EventsGrid = ({ events }) => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-6xl font-bold text-white mb-4">
+          <h2 className="text-6xl font-bold text-gray-900 mb-4">
             Pre-Events
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto mb-6"></div>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-700 max-w-3xl mx-auto">
             Get ready for the main event with our exciting pre-events designed to build anticipation and showcase talent.
           </p>
         </motion.div>
@@ -32,7 +32,7 @@ const EventsGrid = ({ events }) => {
               viewport={{ once: true }}
               className="group"
             >
-              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:border-pink-500/50 transition-all duration-300 transform hover:-translate-y-2">
+              <div className="bg-white rounded-2xl overflow-hidden shadow-2xl border border-gray-200 hover:border-pink-500/50 transition-all duration-300 transform hover:-translate-y-2">
                 <div className="relative overflow-hidden">
                   <img
                     src={`/assets/img/event${event.id}.jpeg`}
@@ -51,22 +51,22 @@ const EventsGrid = ({ events }) => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-pink-600 transition-colors">
                     {event.title}
                   </h3>
                   
-                  <div className="flex items-center text-gray-300 mb-4">
-                    <CalendarDaysIcon className="w-5 h-5 mr-2 text-pink-400" />
+                  <div className="flex items-center text-gray-600 mb-4">
+                    <CalendarDaysIcon className="w-5 h-5 mr-2 text-pink-500" />
                     <span className="text-lg">{event.date}</span>
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-400 text-sm">
+                    <span className="text-gray-500 text-sm">
                       Coming Soon
                     </span>
                     <motion.div
                       whileHover={{ x: 5 }}
-                      className="flex items-center text-pink-400 font-semibold cursor-pointer"
+                      className="flex items-center text-pink-600 font-semibold cursor-pointer"
                     >
                       <span className="mr-2">Learn More</span>
                       <ArrowRightIcon className="w-4 h-4" />

@@ -1,8 +1,18 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { motion } from 'framer-motion'
 import ImageWithFallback from './ImageWithFallback'
 
 export default function Gallery() {
+  const [openSrc, setOpenSrc] = useState(null)
+
+  useEffect(() => {
+    const onKey = (e) => {
+      if (e.key === 'Escape') setOpenSrc(null)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [])
+
   const images = [
     '/assets/img/gallery1.jpeg',
     '/assets/img/gallery2.jpeg',
@@ -57,13 +67,13 @@ export default function Gallery() {
 
       <div className="relative z-10">
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <span className="inline-block px-6 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
+          <span className="inline-block px-6 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-600 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
             Event Gallery
           </span>
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
             MOMENTS OF
-            <span className="block bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 bg-clip-text text-transparent">
+            <span className="block bg-primary-600 bg-clip-text text-transparent">
               EXCELLENCE
             </span>
           </h2>
@@ -88,7 +98,8 @@ export default function Gallery() {
               }}
               className={`relative group cursor-pointer ${
                 index === 0 ? 'md:col-span-2 md:row-span-2' : 
-                index === 2 ? 'lg:col-span-2' : ''
+                index === 2 ? 'lg:col-span-2' : 
+                index === 3 ? 'md:col-span-2' : ''
               }`}
             >
               {/* Hover Overlay */}
@@ -117,14 +128,47 @@ export default function Gallery() {
               </div>
               
               {/* Expand Icon */}
-              <div className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
+              <button
+                onClick={() => setOpenSrc(src)}
+                className="absolute top-4 right-4 w-10 h-10 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300 z-20"
+                aria-label="Open image"
+              >
                 <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4" />
                 </svg>
-              </div>
+              </button>
             </motion.div>
           ))}
         </motion.div>
+
+        {/* Lightbox Modal */}
+        {openSrc && (
+          <div className="fixed inset-0 z-50 flex items-center justify-center">
+            <div
+              className="absolute inset-0 bg-black/70"
+              onClick={() => setOpenSrc(null)}
+            />
+
+            <motion.div
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              className="relative max-w-4xl w-full mx-4"
+            >
+              <button
+                onClick={() => setOpenSrc(null)}
+                className="absolute top-2 right-2 z-50 bg-white/20 rounded-full p-2"
+                aria-label="Close image"
+              >
+                <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+
+              <img src={openSrc} alt="Enlarged" className="w-full h-auto rounded-lg shadow-2xl" />
+            </motion.div>
+          </div>
+        )}
 
         <motion.div 
           variants={itemVariants}
@@ -138,7 +182,7 @@ export default function Gallery() {
             href="#tickets"
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.98 }}
-            className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-600 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 font-aderos tracking-wide group"
+            className="inline-flex items-center justify-center px-8 py-4 bg-primary-600 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 font-aderos tracking-wide group"
           >
             <span>JOIN THE LEGACY</span>
             <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

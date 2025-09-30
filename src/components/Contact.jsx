@@ -14,13 +14,19 @@ export default function Contact() {
       name: 'Alwin Jose',
       phone: '+91 9846797378',
       image: '/assets/img/contact2.jpg',
-      role: 'Program Director'
+      role: 'Event Coordinator'
     },
     {
       name: 'Shreyas Abraham',
       phone: '+91 8078262041',
       image: '/assets/img/contact3.jpg',
-      role: 'Operations Lead'
+      role: 'Event Coordinator'
+    },
+    {
+      name: 'Jez Thomas',
+      phone: '+91 9074602051',
+      image: '/assets/img/contact4.jpg',
+      role: 'Event Coordinator'
     }
   ]
 
@@ -74,7 +80,7 @@ export default function Contact() {
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
             CONNECT WITH THE
-            <span className="block bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 bg-clip-text text-transparent">
+            <span className="block bg-primary-600 bg-clip-text text-transparent">
               INNOVATION TEAM
             </span>
           </h2>
@@ -162,7 +168,7 @@ export default function Contact() {
             {/* Email Contact */}
             <motion.div 
               variants={itemVariants}
-              className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-2xl p-6 text-white shadow-xl"
+              className="bg-primary-600 rounded-2xl p-6 text-white shadow-xl"
             >
               <h4 className="font-bold mb-3">Official Communication</h4>
               <a 
@@ -172,7 +178,7 @@ export default function Contact() {
                 <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                <span className="font-medium">ieeeeepie@gmail.com</span>
+                <span className="font-medium">ieeepie.kerala@gmail.com</span>
               </a>
               <p className="text-sm mt-2 opacity-90">
                 For partnerships, media inquiries, and general information
@@ -186,7 +192,7 @@ export default function Contact() {
           variants={itemVariants}
           className="text-center"
         >
-          <div className="bg-gradient-to-r from-secondary-800 to-secondary-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+          <div className="bg-gray-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 font-aderos">
               Ready to Transform Your Future?
             </h3>

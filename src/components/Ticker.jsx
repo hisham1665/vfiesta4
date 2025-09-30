@@ -14,7 +14,7 @@ const Ticker = memo(function Ticker() {
   ]
 
   return (
-    <div className="relative bg-gradient-to-r from-secondary-900 via-secondary-800 to-secondary-900 text-white py-4 overflow-hidden border-y border-secondary-700">
+    <div className="relative bg-black text-white py-4 overflow-hidden border-y border-secondary-700">
       {/* Background Pattern */}
       <div className="absolute inset-0 bg-grid-pattern bg-[length:30px_30px] opacity-5" />
       
@@ -41,7 +41,7 @@ const Ticker = memo(function Ticker() {
                   <span className="text-lg font-bold font-aderos tracking-wider text-white/90">
                     {item}
                   </span>
-                  <span className="w-2 h-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full animate-pulse" />
+                  <span className="w-2 h-2 bg-primary-500  rounded-full animate-pulse" />
                 </span>
               ))}
             </span>

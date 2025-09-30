@@ -82,7 +82,7 @@ export default function About() {
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
             WHERE INNOVATION
-            <span className="block bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 bg-clip-text text-transparent">
+            <span className="block bg-primary-600 bg-clip-text text-transparent">
               MEETS EXCELLENCE
             </span>
           </h2>
@@ -93,7 +93,7 @@ export default function About() {
             VFiesta 4.0 represents the pinnacle of{' '}
             <span className="font-bold text-primary-600">IEEE PIE Kerala Section's</span>{' '}
             commitment to fostering innovation and entrepreneurial excellence. This flagship experience unites{' '}
-            <span className="font-bold text-accent-600">visionary leaders</span>,{' '}
+            <span className="font-bold text-primary-600">visionary leaders</span>,{' '}
             emerging entrepreneurs, and industry pioneers in an unprecedented celebration of transformative thinking.
           </p>
         </motion.div>
@@ -115,7 +115,7 @@ export default function About() {
               <div className="absolute inset-0 bg-gradient-to-br from-primary-50/50 to-accent-50/50 rounded-3xl opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
               
               <div className="relative z-10">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-primary-600 to-accent-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary-600 text-white rounded-2xl mb-6 group-hover:scale-110 transition-transform duration-300">
                   {feature.icon}
                 </div>
                 
@@ -132,7 +132,7 @@ export default function About() {
         </motion.div>
 
         <motion.div variants={itemVariants}>
-          <div className="bg-gradient-to-r from-primary-600 to-accent-600 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+          <div className="bg-primary-600 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-6 font-aderos">
               Join the Elite Circle of Innovators
             </h3>

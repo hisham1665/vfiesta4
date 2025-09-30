@@ -27,7 +27,7 @@ export default function Countdown({ targetDate }) {
   return (
     <div className="text-center py-10">
       <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight">
-        <span className="text-red-700 font-sans">{remaining.days}</span> DAYS, <span className="text-red-700 font-sans">{remaining.hours}</span> HOURS TO GO !
+        <span className="text-red-700 " style={{ fontFamily: 'Montserrat' }}>{remaining.days}</span> DAYS, <span style={{ fontFamily: 'Montserrat' }} className="text-red-700">{remaining.hours}</span> HOURS TO GO !
       </h2>
     </div>
   )

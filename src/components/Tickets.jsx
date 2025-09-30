@@ -21,14 +21,7 @@ const TicketCard = memo(function TicketCard({ ticket, index, isPopular = false }
         isPopular ? 'transform scale-105' : ''
       }`}
     >
-      {/* Popular Badge */}
-      {isPopular && (
-        <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-20">
-          <div className="bg-gradient-to-r from-accent-500 to-accent-600 text-white px-6 py-2 rounded-full text-sm font-bold shadow-lg">
-            MOST POPULAR
-          </div>
-        </div>
-      )}
+     
 
       {/* Glow Effect for Popular */}
       {isPopular && (
@@ -49,7 +42,7 @@ const TicketCard = memo(function TicketCard({ ticket, index, isPopular = false }
             <h3 className="text-xl font-bold text-secondary-900 mb-2 font-aderos">
               {ticket.heading}
             </h3>
-            <div className="w-16 h-0.5 bg-gradient-to-r from-primary-600 to-accent-600 mx-auto" />
+            <div className="w-16 h-0.5 bg-primary-600 mx-auto" />
           </div>
 
           {/* Price Display */}
@@ -68,44 +61,7 @@ const TicketCard = memo(function TicketCard({ ticket, index, isPopular = false }
             )}
           </div>
 
-          {/* Features */}
-          <div className="space-y-4 mb-8">
-            {ticket.features?.map((feature, idx) => (
-              <div key={idx} className="flex items-center text-secondary-600">
-                <svg className="w-5 h-5 text-green-500 mr-3 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                </svg>
-                <span className="text-sm">{feature}</span>
-              </div>
-            )) || (
-              <>
-                <div className="flex items-center text-secondary-600">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm">Full Event Access</span>
-                </div>
-                <div className="flex items-center text-secondary-600">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm">Workshop Materials</span>
-                </div>
-                <div className="flex items-center text-secondary-600">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm">Networking Sessions</span>
-                </div>
-                <div className="flex items-center text-secondary-600">
-                  <svg className="w-5 h-5 text-green-500 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span className="text-sm">Certificate</span>
-                </div>
-              </>
-            )}
-          </div>
+        
 
           {/* CTA Button */}
           <motion.a 
@@ -139,37 +95,16 @@ export default function Tickets() {
       heading: 'Non-IEEE Members', 
       price: '₹1,299',
       originalPrice: '₹1,599',
-      features: [
-        'Full Event Access',
-        'All Workshop Materials',
-        'Networking Sessions',
-        'Digital Certificate',
-        'Event Swag Kit'
-      ]
     },
     { 
       heading: 'IEEE Members', 
       price: '₹999',
       originalPrice: '₹1,299',
-      features: [
-        'Full Event Access',
-        'Premium Workshop Materials',
-        'VIP Networking Sessions',
-        'IEEE Certificate',
-        'Premium Swag Kit',
-        'Priority Seating'
-      ]
     },
     { 
-      heading: 'IEEE SB Providence', 
-      price: 'Special Price',
-      features: [
-        'Exclusive Host Benefits',
-        'All Premium Features',
-        'Special Recognition',
-        'Host Institution Certificate',
-        'Commemorative Items'
-      ]
+      heading: 'IEEE SB PRC', 
+      price: '₹899',
+      originalPrice: '₹1,199',
     },
   ]
 
@@ -200,7 +135,7 @@ export default function Tickets() {
   return (
     <motion.section 
       id="tickets" 
-      className="relative py-24 px-6 max-w-7xl mx-auto"
+      className="relative py-20 px-6 max-w-7xl mx-auto"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -220,7 +155,7 @@ export default function Tickets() {
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
             INVESTMENT IN YOUR
-            <span className="block bg-gradient-to-r from-primary-600 via-primary-700 to-accent-600 bg-clip-text text-transparent">
+            <span className="block bg-primary-600 bg-clip-text text-transparent">
               FUTURE SUCCESS
             </span>
           </h2>
@@ -241,35 +176,6 @@ export default function Tickets() {
             />
           ))}
         </div>
-
-        <motion.div 
-          variants={itemVariants}
-          className="text-center"
-        >
-          <div className="bg-gradient-to-r from-secondary-800 to-secondary-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
-            <h3 className="text-2xl md:text-3xl font-bold mb-4 font-aderos">
-              Limited Seats Available
-            </h3>
-            <p className="text-lg md:text-xl opacity-90 mb-6 max-w-2xl mx-auto">
-              Secure your spot at Kerala's most prestigious innovation event. Join an exclusive community of 
-              forward-thinking entrepreneurs and industry leaders.
-            </p>
-            <div className="flex flex-wrap justify-center gap-6 text-sm font-semibold">
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-green-400 rounded-full mr-2"></span>
-                Early Bird Pricing
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-yellow-400 rounded-full mr-2"></span>
-                Limited Availability
-              </div>
-              <div className="flex items-center">
-                <span className="w-2 h-2 bg-blue-400 rounded-full mr-2"></span>
-                Instant Confirmation
-              </div>
-            </div>
-          </div>
-        </motion.div>
       </div>
     </motion.section>
   )

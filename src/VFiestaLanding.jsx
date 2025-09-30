@@ -9,6 +9,7 @@ import Tickets from './components/Tickets'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 import GridBackground from './components/GridBackground'
+import Countdown from './components/Countdown'
 
 export default function VFiestaLanding() {
   const { scrollYProgress } = useScroll()
@@ -159,25 +160,9 @@ export default function VFiestaLanding() {
                     filter: "drop-shadow(2px 2px 4px rgba(220, 38, 38, 0.3))"
                   }}
                 >
-                  4.0
+                  <span style={{ fontFamily: 'Arial, sans-serif' }}>4.0</span>
                 </motion.span>
               </motion.h1>
-
-              <motion.div
-                initial={{ opacity: 0, scale: 0.5 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-                className="flex justify-center items-center mb-8"
-              >
-                <div className="relative">
-                  <div className="absolute inset-0 bg-gradient-to-r from-primary-600/20 to-accent-600/20 rounded-full blur-2xl animate-pulse" />
-                  <img 
-                    src="/assets/highqltyvlogo.png" 
-                    alt="VFiesta Logo" 
-                    className="relative z-10 w-48 md:w-64 h-auto drop-shadow-2xl" 
-                  />
-                </div>
-              </motion.div>
 
               <motion.p 
                 className="text-base sm:text-lg md:text-xl lg:text-2xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-4"
@@ -190,6 +175,9 @@ export default function VFiestaLanding() {
                   An IEEE PIE Kerala Section flagship experience that transforms visionaries into industry leaders
                 </span>
               </motion.p>
+
+              {/* Countdown Timer */}
+              <Countdown targetDate="2024-10-15T00:00:00" />
 
               <motion.div
                 initial={{ opacity: 0, y: 30 }}

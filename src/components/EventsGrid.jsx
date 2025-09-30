@@ -37,7 +37,7 @@ const EventsGrid = ({ events }) => {
                   <img
                     src={`/assets/img/event${event.id}.jpeg`}
                     alt={event.title}
-                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     onError={(e) => {
                       e.target.src = '/assets/placeholder.png';
                     }}
@@ -51,7 +51,7 @@ const EventsGrid = ({ events }) => {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
+                  <h3 style={{ fontFamily: "Montserrat" }} className="text-xl font-bold text-gray-900 mb-3 group-hover:text-primary-600 transition-colors">
                     {event.title}
                   </h3>
                   
@@ -68,8 +68,6 @@ const EventsGrid = ({ events }) => {
                       whileHover={{ x: 5 }}
                       className="flex items-center text-primary-600 font-semibold cursor-pointer"
                     >
-                      <span className="mr-2">Learn More</span>
-                      <ArrowRightIcon className="w-4 h-4" />
                     </motion.div>
                   </div>
                 </div>

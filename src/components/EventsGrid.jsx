@@ -1,34 +1,85 @@
-import React from 'react'
+﻿import React from 'react';
+import { motion } from 'framer-motion';
+import { CalendarDaysIcon, ArrowRightIcon } from '@heroicons/react/24/outline';
 
-export default function EventsGrid({ events }) {
+const EventsGrid = ({ events }) => {
   return (
-    <section id="events" className="py-12">
-      <h3 className="text-3xl text-center font-bold">PRE-EVENTS</h3>
-      <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-6">
-        {events.map((e, idx) => {
-          const images = [
-            '/assets/img/event1.jpeg',
-            '/assets/img/event2.jpeg',
-            '/assets/img/event3.jpeg',
-          ];
-          return (
-            <article key={e.id} className="border rounded overflow-hidden bg-white shadow-sm">
-              <img
-                src={images[idx % images.length]}
-                alt={`event-${idx}`}
-                className="w-full h-40 object-cover"
-                loading="lazy"
-              />
-              <div className="h-20 flex items-center justify-center">
-                <div className="text-sm font-bold">{e.title}</div>
+    <section className="py-20 px-4 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900">
+      <div className="max-w-7xl mx-auto">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <h2 className="text-6xl font-bold text-white mb-4">
+            Pre-Events
+          </h2>
+          <div className="w-24 h-1 bg-gradient-to-r from-pink-500 to-violet-500 mx-auto mb-6"></div>
+          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+            Get ready for the main event with our exciting pre-events designed to build anticipation and showcase talent.
+          </p>
+        </motion.div>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {events.map((event, index) => (
+            <motion.div
+              key={event.id}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              className="group"
+            >
+              <div className="bg-gradient-to-br from-slate-800 to-slate-900 rounded-2xl overflow-hidden shadow-2xl border border-slate-700 hover:border-pink-500/50 transition-all duration-300 transform hover:-translate-y-2">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={`/assets/img/event${event.id}.jpeg`}
+                    alt={event.title}
+                    className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                    onError={(e) => {
+                      e.target.src = '/assets/placeholder.png';
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                  <div className="absolute top-4 right-4">
+                    <div className="bg-pink-500 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                      Pre-Event
+                    </div>
+                  </div>
+                </div>
+
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-white mb-3 group-hover:text-pink-400 transition-colors">
+                    {event.title}
+                  </h3>
+                  
+                  <div className="flex items-center text-gray-300 mb-4">
+                    <CalendarDaysIcon className="w-5 h-5 mr-2 text-pink-400" />
+                    <span className="text-lg">{event.date}</span>
+                  </div>
+
+                  <div className="flex items-center justify-between">
+                    <span className="text-gray-400 text-sm">
+                      Coming Soon
+                    </span>
+                    <motion.div
+                      whileHover={{ x: 5 }}
+                      className="flex items-center text-pink-400 font-semibold cursor-pointer"
+                    >
+                      <span className="mr-2">Learn More</span>
+                      <ArrowRightIcon className="w-4 h-4" />
+                    </motion.div>
+                  </div>
+                </div>
               </div>
-              <div className="p-4">
-                <div className="text-xs text-gray-500">Deadline: {e.date}</div>
-              </div>
-            </article>
-          );
-        })}
+            </motion.div>
+          ))}
+        </div>
       </div>
     </section>
-  )
-}
+  );
+};
+
+export default EventsGrid;

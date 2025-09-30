@@ -145,25 +145,10 @@ export default function VFiestaLanding() {
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <motion.span
-                  className="bg-primary-600 bg-clip-text text-transparent font-black drop-shadow-lg"
-                  animate={{
-                    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-                  }}
-                  transition={{
-                    duration: 3,
-                    repeat: Infinity,
-                    ease: "linear",
-                  }}
-                  style={{
-                    backgroundSize: "200% 200%",
-                    WebkitBackgroundClip: "text",
-                    WebkitTextFillColor: "transparent",
-                    filter: "drop-shadow(2px 2px 4px rgba(220, 38, 38, 0.3))",
-                  }}
-                >
-                  <span style={{ fontFamily: "Montserrat" }}>VFIESTA 4.0</span>
-                </motion.span>
+                <span className="block text-black font-normal" style={{ fontFamily: 'inherit' }}>
+                  VFIESTA{' '}
+                  <span style={{ fontFamily: 'Montserrat, sans-serif' }} className="text-red-600 font-extrabold">4.0</span>
+                </span>
               </motion.h1>
 
               <motion.p

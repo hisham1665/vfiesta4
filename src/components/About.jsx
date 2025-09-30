@@ -76,7 +76,7 @@ export default function About() {
 
       <div className="relative z-10 text-center">
         <motion.div variants={itemVariants} className="mb-16">
-          <span className="inline-block px-6 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-700 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
+          <span className="inline-block px-6 py-2 bg-primary-100 text-primary-700 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
             About VFiesta 4.0
           </span>
           

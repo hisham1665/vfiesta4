@@ -67,7 +67,7 @@ export default function Gallery() {
 
       <div className="relative z-10">
         <motion.div variants={itemVariants} className="text-center mb-16">
-          <span className="inline-block px-6 py-2 bg-gradient-to-r from-primary-100 to-accent-100 text-primary-600 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
+          <span className="inline-block px-6 py-2 bg-primary-100 text-primary-600 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
             Event Gallery
           </span>
           

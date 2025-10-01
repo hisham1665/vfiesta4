@@ -123,7 +123,7 @@ export default function Gallery() {
               
               {/* Image Content Overlay */}
               <div className="absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20">
-                <h3 className="font-bold text-lg mb-1">VFiesta Highlights</h3>
+                <h3 className="font-bold text-lg mb-1">V-Fiesta Highlights</h3>
                 <p className="text-sm opacity-90">Capturing innovation in action</p>
               </div>
               

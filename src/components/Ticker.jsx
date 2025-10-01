@@ -5,12 +5,12 @@ const Ticker = memo(function Ticker() {
   const tickerItems = [
     'INNOVATION',
     'ENTREPRENEURSHIP', 
-    'EXCELLENCE',
-    'TRANSFORMATION',
-    'LEADERSHIP',
-    'VISIONARY',
-    'BREAKTHROUGH',
-    'PIONEERING'
+    // 'EXCELLENCE',
+    // 'TRANSFORMATION',
+    // 'LEADERSHIP',
+    // 'VISIONARY',
+    // 'BREAKTHROUGH',
+    // 'PIONEERING'
   ]
 
   return (

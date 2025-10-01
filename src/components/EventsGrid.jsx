@@ -61,9 +61,11 @@ const EventsGrid = ({ events }) => {
                   </div>
 
                   <div className="flex items-center justify-between">
-                    <span className="text-gray-500 text-sm">
-                      Coming Soon
-                    </span>
+                    <a href={event.link} target="_blank" rel="noopener noreferrer">
+                      <div className="bg-primary-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
+                        Register Now
+                      </div>
+                    </a>
                     <motion.div
                       whileHover={{ x: 5 }}
                       className="flex items-center text-primary-600 font-semibold cursor-pointer"

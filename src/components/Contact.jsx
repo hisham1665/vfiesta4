@@ -107,13 +107,13 @@ export default function Contact() {
               />
             </div>
             
-            <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-xl rounded-2xl p-4 shadow-lg z-20">
+            {/* <div className="absolute top-6 left-6 bg-white/95 backdrop-blur-xl rounded-2xl p-4 shadow-lg z-20">
               <h3 className="font-bold text-secondary-900 mb-1">Event Venue</h3>
               <p className="text-sm text-secondary-600">
                 Providence College of Engineering<br />
                 Chengannur, Kerala
               </p>
-            </div>
+            </div> */}
           </motion.div>
 
           {/* Contact Team */}
@@ -193,7 +193,7 @@ export default function Contact() {
           variants={itemVariants}
           className="text-center"
         >
-          <div className="bg-gray-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+          <div className="bg-neutral-800 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 font-aderos">
               Ready to Transform Your Future?
             </h3>

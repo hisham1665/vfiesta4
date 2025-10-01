@@ -57,7 +57,7 @@ export default function VFiestaLanding() {
     () => [
       { id: 1, title: "Mascot Marvels - Pre Event #1 ", date: "Oct 2nd", link: "https://tinyurl.com/MascotMarvels" },
       { id: 2, title: "Doooodle — Pre Event #2", date: "Oct 2nd", link: "https://tinyurl.com/Doodle-VFIESTA" },
-      { id: 3, title: "Game Gambit — Pre Event #3", date: "Oct 4th", link: "https://tinyurl.com/Grand-Gambit-VFIESTA" },
+      { id: 3, title: "Game Gambit — Pre Event #3", date: "Oct 4th", link: "https://tinyurl.com/GrandGambit-VFIESTA" },
       { id: 4, title: "Goal Rush — Pre Event #4", date: "Oct 5th",  link: "https://tinyurl.com/Goal-Rush" },
       { id: 5, title: "Stumble Fest — Pre Event #5", date: "Oct 6th", link: "https://tinyurl.com/Stumble-Fest" },
     ],

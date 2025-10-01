@@ -82,9 +82,9 @@ export default function Tickets() {
             <span className="block bg-primary-600 bg-clip-text text-transparent">FUTURE SUCCESS</span>
           </h2>
 
-          <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
+          {/* <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
             Choose the perfect package for your entrepreneurial journey. Every ticket includes access to world-class sessions, premium networking opportunities, and resources that will accelerate your success.
-          </p>
+          </p> */}
         </motion.div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">

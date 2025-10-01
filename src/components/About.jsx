@@ -77,7 +77,7 @@ export default function About() {
       <div className="relative z-10 text-center">
         <motion.div variants={itemVariants} className="mb-16">
           <span className="inline-block px-6 py-2 bg-primary-100 text-primary-700 text-sm font-bold rounded-full uppercase tracking-wider mb-6">
-            About VFiesta 4.0
+            About V-Fiesta 4.0
           </span>
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
@@ -90,10 +90,10 @@ export default function About() {
 
         <motion.div variants={itemVariants} className="mb-16">
           <p className="text-xl md:text-2xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium">
-            VFiesta 4.0 represents the pinnacle of{' '}
+            V-Fiesta 4.0 represents the pinnacle of{' '}
             <span className="font-bold text-primary-600">IEEE PIE Kerala Section's</span>{' '}
             commitment to fostering innovation and entrepreneurial excellence. This flagship experience unites{' '}
-            <span className="font-bold text-primary-600">visionary leaders</span>,{' '}
+            visionar leaders
             emerging entrepreneurs, and industry pioneers in an unprecedented celebration of transformative thinking.
           </p>
         </motion.div>
@@ -138,7 +138,7 @@ export default function About() {
             </h3>
             <p className="text-lg md:text-xl opacity-90 max-w-3xl mx-auto leading-relaxed">
               Experience thought-provoking discussions, hands-on workshops, and exclusive networking opportunities 
-              that will elevate your entrepreneurial journey and expand your professional horizon.
+              that will elevate your entrepreneurial journey.
             </p>
             <div className="flex flex-wrap justify-center gap-8 mt-8 text-sm font-semibold">
               <div className="flex items-center">
@@ -147,16 +147,16 @@ export default function About() {
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
-                Expert Panels
+                Expert Speaker
               </div>
               <div className="flex items-center">
                 <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
                 Networking Excellence
               </div>
-              <div className="flex items-center">
+              {/* <div className="flex items-center">
                 <span className="w-2 h-2 bg-white rounded-full mr-2"></span>
                 Innovation Showcase
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>

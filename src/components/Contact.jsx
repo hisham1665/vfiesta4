@@ -6,20 +6,8 @@ export default function Contact() {
   const contacts = [
     {
       name: 'Sandra Sara Soloman',
-      phone: '+91 9074602051',
+      // phone: '+91 9074602051',
       image: '/assets/img/contact1.jpg',
-      role: 'Event Coordinator'
-    },
-    {
-      name: 'Alwin Jose',
-      phone: '+91 9846797378',
-      image: '/assets/img/contact2.jpg',
-      role: 'Event Coordinator'
-    },
-    {
-      name: 'Shreyas Abraham',
-      phone: '+91 8078262041',
-      image: '/assets/img/contact3.jpg',
       role: 'Event Coordinator'
     },
     {
@@ -27,7 +15,20 @@ export default function Contact() {
       phone: '+91 9074602051',
       image: '/assets/img/contact4.jpg',
       role: 'Event Coordinator'
-    }
+    },
+    {
+      name: 'Alwin Jose',
+      phone: '+91 9846797378',
+      image: '/assets/img/contact2.jpg',
+      role: 'POC IEEE SB PRC'
+    },
+    {
+      name: 'Shreyas Abraham',
+      phone: '+91 8078262041',
+      image: '/assets/img/contact3.jpg',
+      role: 'POC IEEE PIE KS'
+    },
+    
   ]
 
   const containerVariants = {
@@ -81,13 +82,13 @@ export default function Contact() {
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
             CONNECT WITH THE
             <span className="block bg-primary-600 bg-clip-text text-transparent">
-              INNOVATION TEAM
+              V-FIESTA <span style={{ fontFamily: 'Montserrat, sans-serif' }} className="text-red-600 font-extrabold">4.0</span> TEAM
             </span>
           </h2>
           
           <p className="text-xl text-secondary-600 max-w-3xl mx-auto leading-relaxed">
             Ready to embark on your entrepreneurial journey? Our dedicated team is here to assist you with 
-            registrations, partnerships, and any questions about VFiesta 4.0.
+            registrations, partnerships, and any questions about V-Fiesta 4.0.
           </p>
         </motion.div>
 
@@ -170,7 +171,7 @@ export default function Contact() {
               variants={itemVariants}
               className="bg-primary-600 rounded-2xl p-6 text-white shadow-xl"
             >
-              <h4 className="font-bold mb-3">Official Communication</h4>
+              <h4 className="font-bold mb-3">Contact Us</h4>
               <a 
                 href="mailto:ieeepie.kerala@gmail.com" 
                 className="inline-flex items-center text-white hover:text-white/90 transition-colors duration-200 group"

@@ -1,6 +1,8 @@
 import React, { useMemo, useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Header from "./components/Header";
+import AboutPie from "./components/AboutPie";
+import AboutHost from "./components/AboutHost";
 import Ticker from "./components/Ticker";
 import About from "./components/About";
 import EventsGrid from "./components/EventsGrid";
@@ -53,14 +55,24 @@ export default function VFiestaLanding() {
   );
   const events = useMemo(
     () => [
-      { id: 1, title: "Mascot Marvels - Pre Event #1 ", date: "Oct 2nd" },
-      { id: 2, title: "Doooodle — Pre Event #2", date: "Oct 2nd" },
-      { id: 3, title: "Game Gambit — Pre Event #3", date: "Oct 4th" },
-      { id: 4, title: "Goal Rush — Pre Event #4", date: "Oct 5th" },
-      { id: 5, title: "Stumble Fest — Pre Event #5", date: "Oct 6th" },
+      { id: 1, title: "Mascot Marvels - Pre Event #1 ", date: "Oct 2nd", link: "https://tinyurl.com/MascotMarvels" },
+      { id: 2, title: "Doooodle — Pre Event #2", date: "Oct 2nd", link: "https://tinyurl.com/Doodle-VFIESTA" },
+      { id: 3, title: "Game Gambit — Pre Event #3", date: "Oct 4th", link: "https://tinyurl.com/Grand-Gambit-VFIESTA" },
+      { id: 4, title: "Goal Rush — Pre Event #4", date: "Oct 5th",  link: "https://tinyurl.com/Goal-Rush" },
+      { id: 5, title: "Stumble Fest — Pre Event #5", date: "Oct 6th", link: "https://tinyurl.com/Stumble-Fest" },
     ],
     []
   );
+  // const eventLink = useMemo(
+  //   () =>[
+  //     {id: 1, link: "https://tinyurl.com/Stumble-Fest"},
+  //     {id: 2, link: "https://tinyurl.com/Doodle-VFIESTA"},
+  //     {id: 3, link: "https://tinyurl.com/Grand-Gambit-VFIESTA"},
+  //     {id: 4, link: "https://tinyurl.com/Goal-Rush"},
+  //     {id: 5, link: "https://tinyurl.com/MascotMarvels"},
+  //   ]
+    
+  // )
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 font-sans text-gray-900 overflow-x-hidden">
@@ -146,7 +158,7 @@ export default function VFiestaLanding() {
                 transition={{ duration: 1, delay: 0.3 }}
               >
                 <span className="block text-black font-normal" style={{ fontFamily: 'inherit' }}>
-                  VFIESTA{' '}
+                  V-FIESTA{' '}
                   <span style={{ fontFamily: 'Montserrat, sans-serif' }} className="text-red-600 font-extrabold">4.0</span>
                 </span>
               </motion.h1>
@@ -218,6 +230,8 @@ export default function VFiestaLanding() {
 
         <main className="relative">
           <About />
+          <AboutPie />
+          <AboutHost />
           <EventsGrid events={events} />
           <Gallery />
           <Tickets />

@@ -198,7 +198,7 @@ export default function VFiestaLanding() {
                   visionaries into industry leaders Happening on
                 </span>
                 <span className="block mt-2 text-sm sm:text-base md:text-lg font-bold text-secondary-700">
-                   18th & 19th OCTOBER 2024
+                   18th & 19th OCTOBER 2025
                 </span>
               </motion.p>
 

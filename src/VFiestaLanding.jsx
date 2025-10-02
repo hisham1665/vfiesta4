@@ -150,9 +150,21 @@ export default function VFiestaLanding() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
+              <motion.p
+                className="text-base sm:text-lg md:text-xl lg:text-2xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-4"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.7 }}
+              >
+                IEEE PIE KS x IEEE SB PRC
+                {/* <span className="block mt-2 text-sm sm:text-base md:text-lg text-secondary-500">
+                  An IEEE PIE Kerala Section flagship experience that transforms
+                  visionaries into industry leaders
+                </span> */}
+              </motion.p>
               <motion.h1 
                 id="hero-heading" 
-                className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold tracking-tight"
+                className="custom-hero-heading font-extrabold tracking-tight"
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 1, delay: 0.3 }}
@@ -217,7 +229,7 @@ export default function VFiestaLanding() {
                   href="#about"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-secondary-300 text-secondary-700 text-lg font-semibold rounded-2xl hover:border-primary-600 hover:text-primary-600 transition-all duration-300 font-aderos tracking-wide"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-secondary-300 text-secondary-700 text-lg font-semibold rounded-2xl hover:border-primary-600 hover:text-primary-600 transition-all duration-300 font-aderos tracking-wide mb-12"
                 >
                   EXPLORE EVENT
                 </motion.a>

@@ -4,18 +4,18 @@ import ImageWithFallback from './ImageWithFallback'
 
 export default function Contact() {
   const contacts = [
-    {
-      name: 'Sandra Sara Soloman',
-      // phone: '+91 9074602051',
-      image: '/assets/img/contact1.jpg',
-      role: 'Event Coordinator'
-    },
-    {
-      name: 'Jez Thomas',
-      phone: '+91 9074602051',
-      image: '/assets/img/contact4.jpg',
-      role: 'Event Coordinator'
-    },
+    // {
+    //   name: 'Sandra Sara Soloman',
+    //   phone: '+91 9074602051',
+    //   image: '/assets/img/contact1.jpg',
+    //   role: 'Event Coordinator'
+    // },
+    // {
+    //   name: 'Jez Thomas',
+    //   phone: '+91 9074602051',
+    //   image: '/assets/img/contact4.jpg',
+    //   role: 'Event Coordinator'
+    // },
     {
       name: 'Alwin Jose',
       phone: '+91 9846797378',
@@ -29,6 +29,21 @@ export default function Contact() {
       role: 'POC IEEE PIE KS'
     },
     
+  ]
+
+  const leads=[
+    {
+      name: 'Sandra Sara Soloman',
+      phone: '+91 9074602051',
+      image: '/assets/img/contact1.jpg',
+      role: 'Event Coordinator'
+    },
+    {
+      name: 'Jez Thomas',
+      phone: '+91 9074602051',
+      image: '/assets/img/contact4.jpg',
+      role: 'Event Coordinator'
+    }
   ]
 
   const containerVariants = {
@@ -81,8 +96,8 @@ export default function Contact() {
           
           <h2 className="text-4xl md:text-6xl font-extrabold text-secondary-900 mb-8 tracking-tight">
             CONNECT WITH THE
-            <span className="block bg-primary-600 bg-clip-text text-transparent">
-              V-FIESTA <span style={{ fontFamily: 'Montserrat, sans-serif' }} className="text-red-600 font-extrabold">4.0</span> TEAM
+            <span className="block bg-primary-700 bg-clip-text text-transparent">
+              V-FIESTA <span style={{ fontFamily: 'Montserrat, sans-serif' }} className="text-red-700 font-extrabold">4.0</span> TEAM
             </span>
           </h2>
           
@@ -93,8 +108,15 @@ export default function Contact() {
         </motion.div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
+          
           {/* Map Section */}
           <motion.div variants={itemVariants} className="relative">
+             <div className=" rounded-2xl p-4">
+              <span className="font-bold text-md text-primary-700 mb-1">Event Venue:</span>&nbsp;
+              <h3 className="font-bold text-lg text-secondary-800">
+                Providence College of Engineering
+              </h3>
+            </div>
             <div className="relative overflow-hidden rounded-3xl shadow-2xl">
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent z-10 pointer-events-none" />
               <iframe
@@ -128,6 +150,42 @@ export default function Contact() {
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 gap-6">
+              {leads.map((leads, index) => (
+                <motion.div
+                  key={index}
+                  variants={itemVariants}
+                  whileHover={{ scale: 1.02 }}
+                  className="group bg-white/80 backdrop-blur-xl border border-secondary-200 rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="relative">
+                      <div className="absolute inset-0 bg-gradient-to-r from-primary-400/20 to-accent-400/20 rounded-full blur-lg group-hover:blur-xl transition-all duration-300" />
+                      <ImageWithFallback
+                        src={leads.image}
+                        alt={leads.name}
+                        className="relative w-16 h-16 rounded-full object-cover border-2 border-white shadow-lg"
+                        width={80}
+                        height={80}
+                        text={leads.name.split(' ')[0]}
+                      />
+                    </div>
+                    
+                    <div className="flex-1">
+                      <h4 className="font-bold text-secondary-900 mb-1">{leads.name}</h4>
+                      <p className="text-sm text-secondary-500 mb-2">{leads.role}</p>
+                      {/* <a 
+                        href={`tel:${leads.phone}`}
+                        className="inline-flex items-center text-primary-600 hover:text-primary-700 transition-colors duration-200 group"
+                      >
+                        <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                        </svg>
+                        <span className="text-sm font-medium">{leads.phone}</span>
+                      </a> */}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
               {contacts.map((contact, index) => (
                 <motion.div
                   key={index}
@@ -169,7 +227,7 @@ export default function Contact() {
             {/* Email Contact */}
             <motion.div 
               variants={itemVariants}
-              className="bg-primary-600 rounded-2xl p-6 text-white shadow-xl"
+              className="bg-primary-700 rounded-2xl p-6 text-white shadow-xl"
             >
               <h4 className="font-bold mb-3">Contact Us</h4>
               <a 
@@ -193,7 +251,7 @@ export default function Contact() {
           variants={itemVariants}
           className="text-center"
         >
-          <div className="bg-neutral-800 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
+          <div className="bg-gray-900 rounded-3xl p-8 md:p-12 text-white shadow-2xl">
             <h3 className="text-2xl md:text-3xl font-bold mb-4 font-aderos">
               Ready to Transform Your Future?
             </h3>
@@ -207,7 +265,7 @@ export default function Contact() {
                 href="#tickets"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.98 }}
-                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 font-aderos tracking-wide group"
+                className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-700 to-primary-700 text-white text-lg font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-300 font-aderos tracking-wide group"
               >
                 <span>REGISTER NOW</span>
                 <svg className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">

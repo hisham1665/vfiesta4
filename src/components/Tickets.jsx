@@ -28,15 +28,12 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
           </div>
 
           <motion.a
-            href="#register"
+            href={ticket.link}
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
             className="block w-full py-4 px-6 text-center text-sm font-bold rounded-xl shadow-lg transition-all duration-300 font-aderos tracking-wide relative overflow-hidden group bg-primary-600 text-white hover:shadow-xl reg-btn"
-            onClick={e => {
-              e.preventDefault();
-              const evt = new CustomEvent('reg-btn-click', { bubbles: true });
-              e.target.dispatchEvent(evt);
-            }}
           >
             <span className="relative z-10">{ticket.price === 'Special Price' ? 'CONTACT FOR PRICING' : 'SECURE YOUR SPOT'}</span>
             <div className="absolute inset-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left bg-primary-700" />
@@ -49,11 +46,11 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
 
 export default function Tickets() {
   const ticketCategories = [
-    { heading: 'Non-IEEE Members', price: '₹1,299', originalPrice: '₹1,599' },
-    { heading: 'IEEE Members', price: '₹1,049', originalPrice: '₹1,299' },
-    { heading: 'IEEE  Professional Members', price: '₹1,999', originalPrice: '₹2,199' },
-    { heading: 'Non IEEE Professional Members', price: '₹2,499', originalPrice: '₹2,999' },
-    { heading: 'IEEE SB PRC', price: '₹999', originalPrice: '₹1,099' },
+    { heading: 'IEEE  Professional Members', price: '₹1,999', originalPrice: '₹2,199', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'Non-IEEE Professional Members', price: '₹2,499', originalPrice: '₹2,999', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'IEEE Members', price: '₹1,049', originalPrice: '₹1,299', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'Non-IEEE Members', price: '₹1,299', originalPrice: '₹1,599', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'IEEE SB PRC', price: '₹999', originalPrice: '₹1,099', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
   ]
 
   const containerVariants = {

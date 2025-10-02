@@ -23,7 +23,7 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
           <div className="text-center mb-8">
             <div className="text-4xl font-extrabold mb-2 text-secondary-800">{ticket.price}</div>
             {ticket.originalPrice && (
-              <div className="text-lg text-secondary-400 line-through">{ticket.originalPrice}</div>
+              <div className="text-lg text-secondary-600 line-through decoration-red-600">{ticket.originalPrice}</div>
             )}
           </div>
 
@@ -46,11 +46,11 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
 
 export default function Tickets() {
   const ticketCategories = [
-    { heading: 'IEEE  Professional Members', price: '₹1,999', originalPrice: '₹2,199', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
-    { heading: 'Non-IEEE Professional Members', price: '₹2,499', originalPrice: '₹2,999', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
-    { heading: 'IEEE Members', price: '₹1,049', originalPrice: '₹1,299', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
-    { heading: 'Non-IEEE Members', price: '₹1,299', originalPrice: '₹1,599', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
-    { heading: 'IEEE SB PRC', price: '₹999', originalPrice: '₹1,099', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'Professional Non-IEEE Members', price: '₹2,499', originalPrice: '₹2,999', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'Professional IEEE Members', price: '₹1,999', originalPrice: '₹2,199', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'Student Non-IEEE Members', price: '₹1,299', originalPrice: '₹1,599', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'Student IEEE Members', price: '₹1,049', originalPrice: '₹1,299', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
+    { heading: 'SB PRC IEEE Members ', price: '₹999', originalPrice: '₹1,099', link: 'https://forms.gle/XKA4gsYefJPyRAYB6' },
   ]
 
   const containerVariants = {

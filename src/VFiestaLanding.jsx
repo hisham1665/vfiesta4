@@ -68,11 +68,11 @@ export default function VFiestaLanding() {
   );
   const events = useMemo(
     () => [
-      { id: 1, title: "Mascot Marvels - Pre Event #1 ", date: "Oct 2nd", link: "https://tinyurl.com/MascotMarvels" },
-      { id: 2, title: "Doooodle — Pre Event #2", date: "Oct 2nd", link: "https://tinyurl.com/Doodle-VFIESTA" },
-      { id: 3, title: "Game Gambit — Pre Event #3", date: "Oct 4th", link: "https://tinyurl.com/GrandGambit-VFIESTA" },
-      { id: 4, title: "Goal Rush — Pre Event #4", date: "Oct 5th",  link: "https://tinyurl.com/Goal-Rush" },
-      { id: 5, title: "Stumble Fest — Pre Event #5", date: "Oct 6th", link: "https://tinyurl.com/Stumble-Fest" },
+      { id: 1, title: "Mascot Marvels - Pre Event #1 ", date: "Oct 2nd to 7th",status:"Registration Closed" },
+      { id: 2, title: "Doooodle — Pre Event #2", date: "Oct 2nd to 7th",status:"Closing Soon", link: "https://tinyurl.com/Doodle-VFIESTA" },
+      { id: 3, title: "Game Gambit — Pre Event #3", date: "Oct 5th to 6th",status:"Regitration Closed" },
+      { id: 4, title: "Goal Rush — Pre Event #4", date: "Oct 7th to 8th", status:"Registration Closed" },
+      { id: 5, title: "Stumble Fest — Pre Event #5", date: "Oct 9th to 10th",status:"Closing Soon", link: "https://tinyurl.com/Stumble-Fest" },
     ],
     []
   );
@@ -187,7 +187,8 @@ export default function VFiestaLanding() {
               </motion.h1>
 
               <motion.p
-                className="text-sm sm:text-base md:text-lg lg:text-xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-2"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-2 "
+
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
@@ -195,12 +196,39 @@ export default function VFiestaLanding() {
                 Igniting Innovation & Entrepreneurship Excellence
                 <span className="block mt-2 text-xs sm:text-sm md:text-base text-secondary-500">
                   An IEEE PIE Kerala Section flagship experience that transforms
-                  visionaries into industry leaders Happening on
+                  visionaries into industry leaders.
                 </span>
-                <span className="block mt-2 text-sm sm:text-base md:text-lg font-bold text-secondary-700">
+                {/* <span className="block mt-2 text-sm sm:text-base md:text-lg font-bold text-secondary-700">
                    18th & 19th OCTOBER 2025
-                </span>
+                </span> */}
               </motion.p>
+              {/* Location */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex items-start justify-center gap-2 sm:gap-3 text-secondary-600 px-2"
+              >
+                <svg
+  className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 flex-shrink-0 mt-1"
+  fill="none"
+  viewBox="0 0 24 24"
+  strokeWidth={1.5}
+  stroke="currentColor"
+>
+  <path
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    d="M6.75 3v2.25M17.25 3v2.25M3 8.25h18M4.5 6.75h15a1.5 1.5 0 0 1 1.5 1.5v11.25a1.5 1.5 0 0 1-1.5 1.5h-15a1.5 1.5 0 0 1-1.5-1.5V8.25a1.5 1.5 0 0 1 1.5-1.5Z"
+  />
+</svg>
+
+
+
+                <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold text-secondary-700 text-center leading-tight">
+                  18th & 19th OCTOBER, 2025
+                </span>
+              </motion.div>
 
               {/* Location */}
               <motion.div
@@ -228,7 +256,7 @@ export default function VFiestaLanding() {
                 className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8 md:mt-10 px-4"
               >
                 <motion.a
-                  href="#tickets"
+                  href="https://forms.gle/XKA4gsYefJPyRAYB6"
                   whileHover={{
                     scale: 1.05,
                     boxShadow: "0 20px 40px rgba(220, 38, 38, 0.4)",

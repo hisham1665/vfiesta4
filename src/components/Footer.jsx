@@ -25,7 +25,7 @@ export default function Footer() {
             <img src="/assets/youtube.svg" alt="YouTube" className="h-12 w-12" loading="lazy" />
           </a>
         </div>
-        <a href="#tickets" className="bg-red-700 text-white px-4 py-2 rounded font-aderos">REGISTER NOW</a>
+        <a href="#tickets" className="bg-red-700 text-white px-4 py-2 rounded font-aderos reg-btn">REGISTER NOW</a>
       </div>
     </footer>
   )

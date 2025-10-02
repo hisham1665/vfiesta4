@@ -33,7 +33,7 @@ export default function Contact() {
 
   const leads=[
     {
-      name: 'Sandra Sara Soloman',
+      name: 'Sandra Sara Solomon',
       phone: '+91 9074602051',
       image: '/assets/img/contact1.jpg',
       role: 'Event Coordinator'

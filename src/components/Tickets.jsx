@@ -31,7 +31,12 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
             href="#register"
             whileHover={{ scale: 1.02 }}
             whileTap={{ scale: 0.98 }}
-            className="block w-full py-4 px-6 text-center text-sm font-bold rounded-xl shadow-lg transition-all duration-300 font-aderos tracking-wide relative overflow-hidden group bg-primary-600 text-white hover:shadow-xl"
+            className="block w-full py-4 px-6 text-center text-sm font-bold rounded-xl shadow-lg transition-all duration-300 font-aderos tracking-wide relative overflow-hidden group bg-primary-600 text-white hover:shadow-xl reg-btn"
+            onClick={e => {
+              e.preventDefault();
+              const evt = new CustomEvent('reg-btn-click', { bubbles: true });
+              e.target.dispatchEvent(evt);
+            }}
           >
             <span className="relative z-10">{ticket.price === 'Special Price' ? 'CONTACT FOR PRICING' : 'SECURE YOUR SPOT'}</span>
             <div className="absolute inset-0 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left bg-primary-700" />

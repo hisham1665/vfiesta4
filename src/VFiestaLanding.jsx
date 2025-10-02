@@ -1,6 +1,7 @@
 import React, { useMemo, useEffect, useState } from "react";
 import { motion, useScroll, useSpring } from "framer-motion";
 import Header from "./components/Header";
+import AlertModal from "./components/alert";
 import AboutPie from "./components/AboutPie";
 import AboutHost from "./components/AboutHost";
 import Ticker from "./components/Ticker";
@@ -14,6 +15,18 @@ import GridBackground from "./components/GridBackground";
 import Countdown from "./components/Countdown";
 
 export default function VFiestaLanding() {
+  const [alertOpen, setAlertOpen] = useState(false);
+  const alertTitle = "Registration";
+  const alertMessage = "Registration will open soon. Stay tuned!";
+
+  // Handler for reg-btn click
+  useEffect(() => {
+    const handleRegBtnClick = (e) => {
+      setAlertOpen(true);
+    };
+    document.addEventListener('reg-btn-click', handleRegBtnClick);
+    return () => document.removeEventListener('reg-btn-click', handleRegBtnClick);
+  }, []);
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, {
     stiffness: 100,
@@ -76,6 +89,7 @@ export default function VFiestaLanding() {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100 font-sans text-gray-900 overflow-x-hidden">
+      <AlertModal isOpen={alertOpen} onClose={() => setAlertOpen(false)} title={alertTitle} message={alertMessage} />
       {/* Loading Screen */}
       <motion.div
         className="fixed inset-0 bg-gradient-to-br from-secondary-900 to-secondary-800 z-50 flex items-center justify-center"
@@ -150,18 +164,15 @@ export default function VFiestaLanding() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="space-y-8"
             >
-              <motion.p
+              {/* <motion.p
                 className="text-base sm:text-lg md:text-xl lg:text-2xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
                 IEEE PIE KS x IEEE SB PRC
-                {/* <span className="block mt-2 text-sm sm:text-base md:text-lg text-secondary-500">
-                  An IEEE PIE Kerala Section flagship experience that transforms
-                  visionaries into industry leaders
-                </span> */}
-              </motion.p>
+                
+              </motion.p> */}
               <motion.h1 
                 id="hero-heading" 
                 className="custom-hero-heading font-extrabold tracking-tight"
@@ -195,7 +206,7 @@ export default function VFiestaLanding() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.9 }}
-                className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8 sm:mt-10 px-4"
+                className="flex flex-col md:flex-row items-center justify-center gap-4 mt-8 md:mt-10 px-4"
               >
                 <motion.a
                   href="#tickets"
@@ -206,7 +217,7 @@ export default function VFiestaLanding() {
                   whileTap={{ scale: 0.98 }}
                   className="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary-600 to-primary-700 text-white text-lg font-bold rounded-2xl shadow-2xl hover:shadow-3xl transition-all duration-300 font-aderos tracking-wide group relative overflow-hidden"
                 >
-                  <span className="relative z-10 flex items-center">
+                  <span className="relative z-10 flex items-center ">
                     SECURE YOUR SPOT
                     <svg
                       className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform duration-200"
@@ -229,7 +240,7 @@ export default function VFiestaLanding() {
                   href="#about"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.98 }}
-                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-secondary-300 text-secondary-700 text-lg font-semibold rounded-2xl hover:border-primary-600 hover:text-primary-600 transition-all duration-300 font-aderos tracking-wide mb-12"
+                  className="inline-flex items-center justify-center px-8 py-4 border-2 border-secondary-300 text-secondary-700 text-lg font-semibold rounded-2xl hover:border-primary-600 hover:text-primary-600 transition-all duration-300 font-aderos tracking-wide md:mb-0 mb-12"
                 >
                   EXPLORE EVENT
                 </motion.a>

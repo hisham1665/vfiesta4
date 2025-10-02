@@ -18,7 +18,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="flex items-center gap-3">
-          <a href="#tickets" className="hidden md:inline-block text-sm font-semibold bg-red-700 text-white px-4 py-2 rounded font-aderos">REGISTER</a>
+          <a href="#tickets" className="hidden md:inline-block text-sm font-semibold bg-red-700 text-white px-4 py-2 rounded font-aderos reg-btn">REGISTER</a>
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center rounded p-2 text-gray-700 hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-300"

@@ -157,12 +157,12 @@ export default function VFiestaLanding() {
             />
           </div>
 
-          <div className="relative z-10 max-w-6xl mx-auto text-center">
+          <div className="relative z-10 max-w-6xl mx-auto text-center px-4">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8"
+              className="space-y-6 md:space-y-8"
             >
               {/* <motion.p
                 className="text-base sm:text-lg md:text-xl lg:text-2xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-4"
@@ -187,17 +187,36 @@ export default function VFiestaLanding() {
               </motion.h1>
 
               <motion.p
-                className="text-base sm:text-lg md:text-xl lg:text-2xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-4"
+                className="text-sm sm:text-base md:text-lg lg:text-xl text-secondary-600 max-w-4xl mx-auto leading-relaxed font-medium px-2"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
               >
                 Igniting Innovation & Entrepreneurship Excellence
-                <span className="block mt-2 text-sm sm:text-base md:text-lg text-secondary-500">
+                <span className="block mt-2 text-xs sm:text-sm md:text-base text-secondary-500">
                   An IEEE PIE Kerala Section flagship experience that transforms
-                  visionaries into industry leaders
+                  visionaries into industry leaders Happening on
+                </span>
+                <span className="block mt-2 text-sm sm:text-base md:text-lg font-bold text-secondary-700">
+                   18th & 19th OCTOBER 2024
                 </span>
               </motion.p>
+
+              {/* Location */}
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.8 }}
+                className="flex items-start justify-center gap-2 sm:gap-3 text-secondary-600 px-2"
+              >
+                <svg className="w-6 h-6 sm:w-8 sm:h-8 text-primary-600 flex-shrink-0 mt-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+                <span className="text-sm sm:text-lg md:text-xl lg:text-2xl font-semibold text-secondary-700 text-center leading-tight">
+                  Providence College Of Engineering, Chengannur
+                </span>
+              </motion.div>
 
               {/* Countdown Timer */}
               <Countdown targetDate="2024-10-15T00:00:00" />

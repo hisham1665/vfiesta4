@@ -50,10 +50,10 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
 export default function Tickets() {
   const ticketCategories = [
     { heading: 'Non-IEEE Members', price: '₹1,299', originalPrice: '₹1,599' },
-    { heading: 'IEEE Members', price: '₹1049', originalPrice: '₹1,599' },
-    { heading: 'IEEE  Professional Members', price: '₹899', originalPrice: '₹1,199' },
-    { heading: 'Non IEEE Professional Members', price: '₹899', originalPrice: '₹1,199' },
-    { heading: 'IEEE SB PRC', price: '₹999', originalPrice: '₹1,299' },
+    { heading: 'IEEE Members', price: '₹1,049', originalPrice: '₹1,299' },
+    { heading: 'IEEE  Professional Members', price: '₹1,999', originalPrice: '₹2,199' },
+    { heading: 'Non IEEE Professional Members', price: '₹2,499', originalPrice: '₹2,999' },
+    { heading: 'IEEE SB PRC', price: '₹999', originalPrice: '₹1,099' },
   ]
 
   const containerVariants = {

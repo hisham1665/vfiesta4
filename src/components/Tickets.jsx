@@ -50,8 +50,10 @@ const TicketCard = memo(function TicketCard({ ticket, index }) {
 export default function Tickets() {
   const ticketCategories = [
     { heading: 'Non-IEEE Members', price: '₹1,299', originalPrice: '₹1,599' },
-    { heading: 'IEEE Members', price: '₹999', originalPrice: '₹1,299' },
-    { heading: 'IEEE SB PRC', price: '₹899', originalPrice: '₹1,199' }
+    { heading: 'IEEE Members', price: '₹1049', originalPrice: '₹1,599' },
+    { heading: 'IEEE  Professional Members', price: '₹899', originalPrice: '₹1,199' },
+    { heading: 'Non IEEE Professional Members', price: '₹899', originalPrice: '₹1,199' },
+    { heading: 'IEEE SB PRC', price: '₹999', originalPrice: '₹1,299' },
   ]
 
   const containerVariants = {
@@ -67,7 +69,7 @@ export default function Tickets() {
   return (
     <motion.section
       id="tickets"
-      className="relative py-20 px-6 max-w-7xl mx-auto"
+      className="relative py-10 px-6 max-w-7xl mx-auto"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
@@ -92,9 +94,11 @@ export default function Tickets() {
           </p> */}
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="flex flex-wrap justify-center gap-8 mb-16">
           {ticketCategories.map((ticket, index) => (
-            <TicketCard key={index} ticket={ticket} index={index} />
+            <div key={index} className="w-full md:w-[calc(50%-1rem)] lg:w-[calc(33.333%-1.33rem)]">
+              <TicketCard ticket={ticket} index={index} />
+            </div>
           ))}
         </div>
       </div>
